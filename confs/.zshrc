@@ -20,6 +20,9 @@ setopt HIST_REDUCE_BLANKS
 # fwd-i-search enable through C-s
 stty -ixon
 
+# CTRL+U doesn't cut entire line fix
+bindkey "^U" backward-kill-line
+
 alias k="kubectl"
 alias ll="ls -al"
 alias ekm="sed -i -e '/\[kubernetes\]/{n;s/.*/disabled = false/;}' ~/.config/starship.toml"
