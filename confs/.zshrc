@@ -26,7 +26,7 @@ bindkey "^U" backward-kill-line
 alias k="kubectl"
 alias ll="ls -al"
 alias ekm="sed -i -e '/\[kubernetes\]/{n;s/.*/disabled = false/;}' ~/.config/starship.toml"
-alias dkm="sed -i -e '/\[kubernetes\]/{n;s/.*//;}' ~/.config/starship.toml"
+alias dkm="sed -i -e '/\[kubernetes\]/{n;s/.*/disabled = true/;}' ~/.config/starship.toml"
 
 #pyenv controlling python version
 if command -v pyenv 1>/dev/null 2>&1; then
