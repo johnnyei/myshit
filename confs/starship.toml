@@ -2,50 +2,53 @@
 # Don't print a new line at the start of the prompt
 add_newline = false
 
-prompt_order = [
-    "username",
-    "hostname",
-    "kubernetes",
-    "directory",
-    "git_branch",
-    "git_commit",
-    "git_state",
-    "git_status",
-#    "hg_branch",
-    "docker_context",
-#    "package",
-#    "dotnet",
-#    "elixir",
-#    "elm",
-#    "erlang",
-    "golang",
-#    "java",
-#    "julia",
-#    "nim",
-#    "nodejs",
-#    "ocaml",
-#    "php",
-#    "purescript",
-    "python",
-#    "ruby",
-#    "rust",
-#    "terraform",
-#    "zig",
-    "nix_shell",
-    "conda",
-#    "memory_usage",
-    "aws",
-#    "env_var",
-#    "crystal",
-    "cmd_duration",
-#    "custom",
-#    "line_break",
-    "jobs",
-#    "battery",
-#    "time",
-    "character",
-]
+format = """
+$directory\
+$username\
+$hostname\
+$kubernetes\
+$git_branch\
+$git_commit\
+$git_state\
+$git_status\
+$docker_context\
+$golang\
+$python\
+$nix_shell\
+$conda\
+$aws\
+$cmd_duration\
+$line_break\
+$jobs\
+$character
+"""
+#$hg_branch\
+#$package\
+#$dotnet\
+#$elixir\
+#$elm\
+#$erlang\
+#$java\
+#$julia\
+#$nim\
+#$nodejs\
+#$ocaml\
+#$php\
+#$purescript\
+#$ruby\
+#$rust\
+#$terraform\
+#$zig\
+#memory_usage\
+#$env_var\
+#$crystal\
+#$custom\
+#$battery\
+#    $time\
 
 # is disabled by default
 [kubernetes]
+disabled = true
 
+[directory]
+format="\\[[$path]($style)[$read_only]($read_only_style)\\] "
