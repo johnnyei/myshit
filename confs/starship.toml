@@ -1,4 +1,7 @@
 # https://starship.rs/config/
+scan_timeout = 30
+command_timeout = 1000
+
 # Don't print a new line at the start of the prompt
 add_newline = false
 
@@ -44,7 +47,7 @@ $character
 #$crystal\
 #$custom\
 #$battery\
-#    $time\
+#$time\
 
 # is disabled by default
 [kubernetes]
